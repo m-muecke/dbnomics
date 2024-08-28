@@ -22,6 +22,16 @@ options(tibble.print_min = 5L, tibble.print_max = 5L)
 [![CRAN status](https://www.r-pkg.org/badges/version/dbnomics)](https://CRAN.R-project.org/package=dbnomics)
 <!-- badges: end -->
 
+dbnomics is a minimal R client for the [DBnomics](https://db.nomics.world/about) API.
+
+## Installation
+You can install the development version of gleif from [GitHub](https://github.com/) with:
+
+```{r, eval = FALSE}
+# install.packages("pak")
+pak::pak("m-muecke/dbnomics")
+```
+
 ## Related work
 
 * [rdbnomics](https://git.nomics.world/dbnomics/rdbnomics/): Official R package for accessing DBnomics data series
