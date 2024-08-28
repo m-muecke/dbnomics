@@ -1,0 +1,22 @@
+Package: dbnomics
+Title: Client for dbnomics
+Version: 0.0.0.9000
+Authors@R:
+    person("Maximilian", "Mücke", , "muecke.maximilian@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0009-0000-9432-9795"))
+Description: Download and search data from dbnomics
+License: MIT + file LICENSE
+URL: https://m-muecke.github.io/dbnomics/,
+    https://github.com/m-muecke/dbnomics
+BugReports: https://github.com/m-muecke/dbnomics/issues
+Depends:
+    R (>= 4.1.0)
+Imports:
+    httr2 (>= 1.0.0)
+Suggests:
+    testthat (>= 3.0.0),
+    tibble
+Config/testthat/edition: 3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2

@@ -1,0 +1,5 @@
+url: https://m-muecke.github.io/dbnomics
+
+template:
+  bootstrap: 5
+  light-switch: true
