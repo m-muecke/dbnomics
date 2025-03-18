@@ -64,25 +64,25 @@
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span><span class="fu">db_providers</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 92 × 7</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 93 × 7</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    code  indexed_at               name         region slug  terms_of_use website</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> ACOSS 2024-02-21T04:02:56.149Z Agence cent… FRANCE acoss https://www… https:…</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> AFDB  2023-02-22T15:37:20.879Z African Dev… Africa afdb  https://www… https:…</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> AIH   2023-03-17T07:59:19.500Z Africa Info… AFRICA aih   https://www… https:…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> AMECO 2025-03-03T01:19:47.491Z Annual macr… EU     ameco https://ec.… https:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> AMECO 2025-03-17T01:14:40.750Z Annual macr… EU     ameco https://ec.… https:…</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> Apple 2023-02-21T17:46:38.181Z Apple        World  apple https://cov… https:…</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> AQICN 2023-02-21T09:39:08.392Z The World A… World  aqicn https://aqi… https:…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> BCB   2025-03-03T01:13:48.946Z Banco Centr… BR     bcb   <span style="color: #BB0000;">NA</span>           http:/…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> BCEAO 2025-03-03T01:15:55.535Z Banque Cent… West … bceao http://www.… http:/…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> BDF   2025-03-03T05:20:38.841Z Banque de F… FR     bdf   https://web… https:…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> BEA   2025-03-03T12:20:45.162Z U.S. Bureau… US     bea   https://bea… http:/…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 82 more rows</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> BCB   2025-03-17T01:17:30.022Z Banco Centr… BR     bcb   <span style="color: #BB0000;">NA</span>           http:/…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> BCEAO 2025-03-17T01:17:32.750Z Banque Cent… West … bceao http://www.… http:/…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> BDF   2025-03-16T06:53:55.043Z Banque de F… FR     bdf   https://web… https:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> BEA   2025-03-16T13:23:00.793Z U.S. Bureau… US     bea   https://bea… http:/…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 83 more rows</span></span>
 <span class="r-in"><span><span class="fu">db_providers</span><span class="op">(</span><span class="st">"BEA"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1 × 7</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   code  indexed_at               name          region slug  terms_of_use website</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> BEA   2025-03-03T12:20:45.162Z U.S. Bureau … US     bea   https://bea… http:/…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> BEA   2025-03-16T13:23:00.793Z U.S. Bureau … US     bea   https://bea… http:/…</span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
