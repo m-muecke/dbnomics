@@ -5,19 +5,21 @@
 #' \donttest{
 #' db_series("AMECO/ZUTN/EA19.1.0.0.0.ZUTN")
 #' }
-db_series <- function(series_ids,
-                      facets = FALSE,
-                      observations = FALSE,
-                      metadata = TRUE,
-                      format = "json",
-                      align_periods = FALSE) {
+db_series <- function(
+  series_ids,
+  facets = FALSE,
+  observations = FALSE,
+  metadata = TRUE,
+  format = "json",
+  align_periods = FALSE
+) {
   stopifnot(
     is_character(series_ids),
-    is_bool(facets),
-    is_bool(observations),
-    is_bool(metadata),
+    is_flag(facets),
+    is_flag(observations),
+    is_flag(metadata),
     is_string(format),
-    is_bool(align_periods)
+    is_flag(align_periods)
   )
   dbnomics(
     "series",
@@ -32,7 +34,8 @@ db_series <- function(series_ids,
 
 #' List datasets from full-text search
 #'
-#' @param query `character(1)` full-text search.
+#' @param query (`character(1)`)\cr
+#'   Full-text search.
 #' @export
 #' @examples
 #' \donttest{
@@ -42,7 +45,7 @@ db_search <- function(query) {
   stopifnot(is_string(query))
   res <- dbnomics("search", q = query)
   res <- res$result$docs
-  res <- data.frame(
+  data.frame(
     code = map_chr(res, "code"),
     dir_hash = map_chr(res, "dir_hash"),
     indexed_at = map_chr(res, "indexed_at"),
@@ -54,7 +57,6 @@ db_search <- function(query) {
     updated_at = map_chr(res, "updated_at"),
     check.names = FALSE
   )
-  as_tibble(res)
 }
 
 #' List providers and datasets sorted by creation date
@@ -89,15 +91,13 @@ db_last_updates <- function() {
     website = map_chr(providers, "website"),
     check.names = FALSE
   )
-  list(
-    datasets = as_tibble(datasets),
-    providers = as_tibble(providers)
-  )
+  list(datasets = datasets, providers = providers)
 }
 
 #' List available providers
 #'
-#' @param provider_code `character(1)` code of the provider
+#' @param provider_code (`NULL` | `character(1)`)\cr
+#'   Code of the provider.
 #' @returns A `data.frame()` with the available providers.
 #' @export
 #' @examples
@@ -106,7 +106,7 @@ db_last_updates <- function() {
 #' db_providers("BEA")
 #' }
 db_providers <- function(provider_code = NULL) {
-  stopifnot(is_string_or_null(provider_code))
+  stopifnot(is_string(provider_code, null_ok = TRUE))
   resource <- "providers"
   has_code <- !is.null(provider_code)
   if (has_code) {
@@ -128,7 +128,7 @@ db_providers <- function(provider_code = NULL) {
       check.names = FALSE
     )
   }
-  as_tibble(providers)
+  providers
 }
 
 dbnomics <- function(resource, ..., limit = 100L, offset = 0L) {
