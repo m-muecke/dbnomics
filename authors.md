@@ -1,0 +1,22 @@
+# Authors and Citation
+
+## Authors
+
+- **Maximilian Mücke**. Author, maintainer.
+  [](https://orcid.org/0009-0000-9432-9795)
+
+## Citation
+
+Source:
+[`DESCRIPTION`](https://github.com/m-muecke/dbnomics/blob/main/DESCRIPTION)
+
+Mücke M (2026). *dbnomics: Client for dbnomics*. R package version
+0.0.0.9000, <https://m-muecke.github.io/dbnomics/>.
+
+    @Manual{,
+      title = {dbnomics: Client for dbnomics},
+      author = {Maximilian Mücke},
+      year = {2026},
+      note = {R package version 0.0.0.9000},
+      url = {https://m-muecke.github.io/dbnomics/},
+    }
